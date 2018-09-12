@@ -1,0 +1,44 @@
+{
+  "name": "arc-view-settings-panel",
+  "description": "Setting panel for ARC to control view",
+  "version": "2.0.0-preview",
+  "license": "Apache-2.0",
+  "main": "arc-view-settings-panel.html",
+  "keywords": [
+    "api-components"
+  ],
+  "authors": [
+    "Pawel Psztyc",
+    "The Advanced REST client authors <arc@mulesoft.com>"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "arc-settings-panel-mixin": "advanced-rest-client/arc-settings-panel-mixin#2.0.0-preview",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^2.0.3",
+    "paper-listbox": "PolymerElements/paper-listbox#^2.0.0",
+    "paper-item": "PolymerElements/paper-item#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "arc-icons": "advanced-rest-client/arc-icons#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "arc-electron-default-theme": "advanced-rest-client/arc-electron-default-theme#2.0.0-preview",
+    "web-animations-js": "web-animations/web-animations-js#^2.3",
+    "arc-local-store-preferences": "advanced-rest-client/arc-local-store-preferences#2.0.0-preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:advanced-rest-client/arc-view-settings-panel.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tasks"
+  ]
+}
