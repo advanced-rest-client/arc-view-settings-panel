@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../arc-settings-panel-mixin/arc-settings-panel-mixin.html">
+<link rel="import" href="../arc-settings-panel-mixin/arc-settings-panel-styles.html">
 <link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../paper-listbox/paper-listbox.html">
 <link rel="import" href="../paper-item/paper-item.html">
@@ -10,47 +11,18 @@
 <link rel="import" href="../iron-icon/iron-icon.html">
 <dom-module id="arc-view-settings-panel">
   <template>
-    <style>
+    <style include="arc-settings-panel-styles">
     :host {
       display: block;
+      @apply --arc-font-body1;
       @apply --arc-view-settings-panel;
-    }
-
-    h2 {
-      @apply --arc-font-subhead;
-      @apply --layout-horizontal;
-      @apply --layout-center;
-      height: 48px;
-      color: var(--arc-settings-panel-header-color);
-      margin: 0;
-      @apply --arc-settings-panel-header;
-    }
-
-    .card {
-      padding: 12px;
-      border-radius: 4px;
-      @apply --shadow-elevation-4dp;
-    }
-
-    iron-icon {
-      color: var(--arc-settings-panel-icon-color, rgba(0, 0, 0, 0.34));
-      width: 24px;
-      height: 24px;
-    }
-
-    .nav-away-icon {
-      transform: rotate(-90deg);
-    }
-
-    .clickable {
-      cursor: pointer;
     }
 
     .layout-selector {
       padding: 0 16px;
     }
     </style>
-    <h2>View settings</h2>
+    <h2 class="panel-title">View settings</h2>
     <div class="card">
       <div class="layout-selector">
         <paper-dropdown-menu label="Lists layout">
@@ -67,7 +39,7 @@
           <div>Themes</div>
           <div secondary="true">Opens themes selector screen</div>
         </paper-item-body>
-        <iron-icon icon="arc:open-in-new" item-icon></iron-icon>
+        <iron-icon icon="arc:open-in-new" class="panel-icon" item-icon></iron-icon>
       </paper-item>
     </div>
   </template>
@@ -84,6 +56,10 @@
    * Custom property | Description | Default
    * ----------------|-------------|----------
    * `--arc-view-settings-panel` | Mixin applied to this elment | `{}`
+   * `--arc-settings-panel-header-color` | Color of the settings panel header | `--accent-color`
+   * `--arc-settings-panel-icon-color` | Settings panel icon color | `rgba(0, 0, 0, 0.34)`
+   * `--arc-font-body1` | Mixin apllied to the description elements | `{}`
+   * `--arc-font-subhead` | Mixin applied to the section headers | `{}`
    *
    * @customElement
    * @polymer
@@ -92,7 +68,9 @@
    * @appliesMixin ArcComponents.ArcSettingsPanelMixin
    */
   class ArcViewSettingsPanel extends ArcComponents.ArcSettingsPanelMixin(Polymer.Element) {
-    static get is() {return 'arc-view-settings-panel';}
+    static get is() {
+      return 'arc-view-settings-panel';
+    }
     static get properties() {
       return {
         /**
@@ -109,6 +87,8 @@
     _processValues(values) {
       if (typeof values.viewListType === 'undefined') {
         values.viewListType = 'default';
+      } else {
+        values.viewListType = String(values.viewListType);
       }
       return values;
     }
