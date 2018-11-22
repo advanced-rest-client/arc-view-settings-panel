@@ -87,6 +87,67 @@
         });
       });
     });
+
+    suite('openThemesPanel()', () => {
+      let element;
+      setup(() => {
+        element = fixture('Manual');
+      });
+
+      test('Dispatchs "navigate" event', () => {
+        const spy = sinon.spy();
+        element.addEventListener('navigate', spy);
+        element.openThemesPanel();
+        assert.isTrue(spy.called);
+      });
+
+      test('Event is cancelable', () => {
+        const spy = sinon.spy();
+        element.addEventListener('navigate', spy);
+        element.openThemesPanel();
+        assert.isTrue(spy.getCall(0).args[0].cancelable);
+      });
+
+      test('Event is composed', () => {
+        const spy = sinon.spy();
+        element.addEventListener('navigate', spy);
+        element.openThemesPanel();
+        assert.isTrue(spy.getCall(0).args[0].composed);
+      });
+
+      test('Event bubbles', () => {
+        const spy = sinon.spy();
+        element.addEventListener('navigate', spy);
+        element.openThemesPanel();
+        assert.isTrue(spy.getCall(0).args[0].bubbles);
+      });
+
+      test('Event\'s detail has base', () => {
+        const spy = sinon.spy();
+        element.addEventListener('navigate', spy);
+        element.openThemesPanel();
+        assert.equal(spy.getCall(0).args[0].detail.base, 'themes-panel');
+      });
+    });
+
+    suite('_processValues()', () => {
+      let element;
+      setup(() => {
+        element = fixture('Manual');
+      });
+
+      test('Sets default value for viewListType', () => {
+        const result = element._processValues({});
+        assert.equal(result.viewListType, 'default');
+      });
+
+      test('viewListType is always string', () => {
+        const result = element._processValues({
+          viewListType: 123
+        });
+        assert.equal(result.viewListType, '123');
+      });
+    });
   });
   </script>
 </body>
