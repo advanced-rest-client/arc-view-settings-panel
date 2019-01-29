@@ -1,7 +1,7 @@
 {
   "name": "arc-view-settings-panel",
   "description": "Setting panel for ARC to control view",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "Apache-2.0",
   "main": "arc-view-settings-panel.html",
   "keywords": [
@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "arc-settings-panel-mixin": "advanced-rest-client/arc-settings-panel-mixin#2.0.0-preview",
+    "arc-settings-panel-mixin": "advanced-rest-client/arc-settings-panel-mixin#^2.0.0",
     "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^2.0.3",
     "paper-listbox": "PolymerElements/paper-listbox#^2.0.0",
     "paper-item": "PolymerElements/paper-item#^2.0.0",
@@ -28,7 +28,7 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
     "arc-electron-default-theme": "advanced-rest-client/arc-electron-default-theme#2.0.0-preview",
     "web-animations-js": "web-animations/web-animations-js#^2.3",
-    "arc-local-store-preferences": "advanced-rest-client/arc-local-store-preferences#2.0.0-preview"
+    "arc-local-store-preferences": "advanced-rest-client/arc-local-store-preferences#^2.0.0"
   },
   "repository": {
     "type": "git",
