@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
   <title>arc-view-settings-panel test</title>
-  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
-  <script src="../../web-component-tester/browser.js"></script>
-  <link rel="import" href="../arc-view-settings-panel.html">
-  <link rel="import" href="../../arc-local-store-preferences/arc-local-store-preferences.html">
+  <script src="../../../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../../../wct-browser-legacy/browser.js"></script>
+  <script type="module" src="../arc-view-settings-panel.js"></script>
+  <script type="module" src="../../../arc-local-store-preferences/arc-local-store-preferences.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,9 @@
       <arc-view-settings-panel></arc-view-settings-panel>
     </template>
   </test-fixture>
-  <script>
+  <script type="module">
+  import '../arc-view-settings-panel.js';
+  import '../../../arc-local-store-preferences/arc-local-store-preferences.js';
   suite('arc-view-settings-panel', () => {
     suite('Auto reading settings', () => {
       let element;
