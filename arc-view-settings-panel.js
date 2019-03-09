@@ -1,15 +1,15 @@
-import { PolymerElement } from '../../@polymer/polymer/polymer-element.js';
-import '../../arc-settings-panel-mixin/arc-settings-panel-mixin.js';
-import '../../arc-settings-panel-mixin/arc-settings-panel-styles.js';
-import '../../@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
-import '../../@polymer/paper-listbox/paper-listbox.js';
-import '../../@polymer/paper-item/paper-item.js';
-import '../../@polymer/paper-item/paper-item-body.js';
-import '../../@polymer/paper-styles/shadow.js';
-import '../../@polymer/iron-flex-layout/iron-flex-layout.js';
-import '../../arc-icons/arc-icons.js';
-import '../../@polymer/iron-icon/iron-icon.js';
-import { html } from '../../@polymer/polymer/lib/utils/html-tag.js';
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {ArcSettingsPanelMixin} from '@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-mixin.js';
+import '@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-styles.js';
+import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
+import '@polymer/paper-listbox/paper-listbox.js';
+import '@polymer/paper-item/paper-item.js';
+import '@polymer/paper-item/paper-item-body.js';
+import '@polymer/paper-styles/shadow.js';
+import '@polymer/iron-flex-layout/iron-flex-layout.js';
+import '@advanced-rest-client/arc-icons/arc-icons.js';
+import '@polymer/iron-icon/iron-icon.js';
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 /**
  * `arc-view-settings-panel`
  *
@@ -31,9 +31,9 @@ import { html } from '../../@polymer/polymer/lib/utils/html-tag.js';
  * @polymer
  * @demo demo/index.html
  * @memberof UiElements
- * @appliesMixin ArcComponents.ArcSettingsPanelMixin
+ * @appliesMixin ArcSettingsPanelMixin
  */
-class ArcViewSettingsPanel extends ArcComponents.ArcSettingsPanelMixin(PolymerElement) {
+export class ArcViewSettingsPanel extends ArcSettingsPanelMixin(PolymerElement) {
   static get template() {
     return html`
     <style include="arc-settings-panel-styles">
@@ -70,9 +70,6 @@ class ArcViewSettingsPanel extends ArcComponents.ArcSettingsPanelMixin(PolymerEl
 `;
   }
 
-  static get is() {
-    return 'arc-view-settings-panel';
-  }
   static get properties() {
     return {
       /**
@@ -128,4 +125,4 @@ class ArcViewSettingsPanel extends ArcComponents.ArcSettingsPanelMixin(PolymerEl
     this.__settingsRestored = true;
   }
 }
-window.customElements.define(ArcViewSettingsPanel.is, ArcViewSettingsPanel);
+window.customElements.define('arc-view-settings-panel', ArcViewSettingsPanel);

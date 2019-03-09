@@ -5,24 +5,20 @@
  *   https://github.com/Polymer/tools/tree/master/packages/gen-typescript-declarations
  *
  * To modify these typings, edit the source file(s):
- *   arc-view-settings-panel.html
+ *   arc-view-settings-panel.js
  */
 
 
 // tslint:disable:variable-name Describing an API that's defined elsewhere.
 // tslint:disable:no-any describes the API as best we are able today
 
-/// <reference path="../polymer/types/polymer-element.d.ts" />
-/// <reference path="../arc-settings-panel-mixin/arc-settings-panel-mixin.d.ts" />
-/// <reference path="../arc-settings-panel-mixin/arc-settings-panel-styles.d.ts" />
-/// <reference path="../paper-dropdown-menu/paper-dropdown-menu.d.ts" />
-/// <reference path="../paper-listbox/paper-listbox.d.ts" />
-/// <reference path="../paper-item/paper-item.d.ts" />
-/// <reference path="../paper-item/paper-item-body.d.ts" />
-/// <reference path="../paper-styles/shadow.d.ts" />
-/// <reference path="../iron-flex-layout/iron-flex-layout.d.ts" />
-/// <reference path="../arc-icons/arc-icons.d.ts" />
-/// <reference path="../iron-icon/iron-icon.d.ts" />
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+
+import {ArcSettingsPanelMixin} from '@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-mixin.js';
+
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+
+export {ArcViewSettingsPanel};
 
 declare namespace UiElements {
 
@@ -44,7 +40,7 @@ declare namespace UiElements {
    * `--arc-font-subhead` | Mixin applied to the section headers | `{}`
    */
   class ArcViewSettingsPanel extends
-    ArcComponents.ArcSettingsPanelMixin(
+    ArcSettingsPanelMixin(
     Object) {
 
     /**
@@ -63,6 +59,9 @@ declare namespace UiElements {
   }
 }
 
-interface HTMLElementTagNameMap {
-  "arc-view-settings-panel": UiElements.ArcViewSettingsPanel;
+declare global {
+
+  interface HTMLElementTagNameMap {
+    "arc-view-settings-panel": UiElements.ArcViewSettingsPanel;
+  }
 }
