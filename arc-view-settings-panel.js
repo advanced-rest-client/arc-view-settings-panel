@@ -1,15 +1,15 @@
-import {PolymerElement} from '@polymer/polymer/polymer-element.js';
-import {ArcSettingsPanelMixin} from '@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-mixin.js';
-import '@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-styles.js';
-import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
-import '@polymer/paper-listbox/paper-listbox.js';
-import '@polymer/paper-item/paper-item.js';
-import '@polymer/paper-item/paper-item-body.js';
-import '@polymer/paper-styles/shadow.js';
-import '@polymer/iron-flex-layout/iron-flex-layout.js';
-import '@advanced-rest-client/arc-icons/arc-icons.js';
-import '@polymer/iron-icon/iron-icon.js';
-import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+import {PolymerElement} from '../../@polymer/polymer/polymer-element.js';
+import {ArcSettingsPanelMixin} from '../../@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-mixin.js';
+import '../../@advanced-rest-client/arc-settings-panel-mixin/arc-settings-panel-styles.js';
+import '../../@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
+import '../../@polymer/paper-listbox/paper-listbox.js';
+import '../../@polymer/paper-item/paper-item.js';
+import '../../@polymer/paper-item/paper-item-body.js';
+import '../../@polymer/paper-styles/shadow.js';
+import '../../@polymer/iron-flex-layout/iron-flex-layout.js';
+import '../../@advanced-rest-client/arc-icons/arc-icons.js';
+import '../../@polymer/iron-icon/iron-icon.js';
+import {html} from '../../@polymer/polymer/lib/utils/html-tag.js';
 /**
  * `arc-view-settings-panel`
  *
